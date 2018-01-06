@@ -1,7 +1,7 @@
 module.exports = {
   entry: ["./js/utils","./js/app"],
   output: {
-    filename: "bundle.js"
+    filename: "bundle"
   },
   watch: true,
 
@@ -11,6 +11,12 @@ module.exports = {
         test: /\.es6$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "jshint-loader",
+        enforce: "pre"
       }
     ]
   },
