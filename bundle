@@ -44,9 +44,43 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	(function webpackMissingModule() { throw new Error("Cannot find module \"./js/utils\""); }());
-	(function webpackMissingModule() { throw new Error("Cannot find module \"./js/app\""); }());
+	__webpack_require__(1);
+	module.exports = __webpack_require__(2);
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+	console.log("utils file loaded.");
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	__webpack_require__(3);
+
+	document.write("Welcome to this tutorial thingy. and now i'm watchin. for server.register change.corret bundle.now?");
+
+	console.log("App loaded");
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	var login = function login(username, password) {
+	  if (username === 'admin' && password === 'myPassword') {
+	    console.log('Correct Username and password');
+	  } else {
+	    console.log('Access Denied');
+	  }
+	};
+
+	login('admin', 'notMyPassword');
 
 /***/ })
 /******/ ]);
